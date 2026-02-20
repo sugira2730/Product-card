@@ -1,0 +1,130 @@
+/* =====================
+VARIABLES
+===================== */
+:root {
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text-main: #1f2937;
+    --text-muted: #64748b;
+    --shadow-soft: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 1.8rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+/* =====================
+BASE
+===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background-color: var(--bg-main);
+}
+
+/* =====================
+LAYOUT
+===================== */
+.container {
+    max-width: 40rem;
+    margin: 8rem auto;
+    padding: 0 2rem;
+}
+
+/* =====================
+PRODUCT CARD
+===================== */
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: var(--shadow-hover);
+}
+
+/* =====================
+IMAGE
+===================== */
+.product-image img {
+    width: 100%;
+    display: block;
+}
+
+/* =====================
+INFO SECTION
+===================== */
+.product-info {
+    padding: 2.4rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: var(--text-main);
+}
+
+.product-description {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* =====================
+FOOTER
+===================== */
+.product-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.btn-add {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+/* =====================
+RESPONSIVE
+===================== */
+@media (max-width: 400px) {
+    .product-footer {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: flex-start;
+    }
+
+    .btn-add {
+        width: 100%;
+        text-align: center;
+    }
+}
